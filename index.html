@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Tic-Tac-Toe</title>
+    </head>
+    <body>
+        <button class="toggle" id="toggle-dark-mode">
+            <img src="brightness.png" alt="Light Mode" id="sun-icon" />
+            <img src="moon.png" alt="Dark Mode" id="moon-icon" style="display: none;" />
+        </button>
+        <div class="turn">
+            <h3>Turn for</h3>
+            <div class="turnbox align">X</div>
+            <div class="turnbox align">O</div>
+            <div class="bg"></div>
+        </div>
+       <div class="main-grid">
+            <div class="box align" id="0">0</div>
+            <div class="box align" id="1">1</div>
+            <div class="box align" id="2">2</div>
+            <div class="box align" id="3">3</div>
+            <div class="box align" id="4">4</div>
+            <div class="box align" id="5">5</div>
+            <div class="box align" id="6">6</div>
+            <div class="box align" id="7">7</div>
+            <div class="box align" id="8">8</div>
+       </div>
+
+       <h2 id="result"></h2>
+       <button id="play-again">Play Again</button>
+
+        <script src="script.js"></script>
+    </body>
+</html>

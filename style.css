@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    width: 100vw;
+    
+    background-color: aquamarine;
+    text-align: center;
+    padding-top: 5vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.dark-mode{
+    width: 100vw;
+    
+    background-color: rgb(14, 20, 22);
+    text-align: center;
+    padding-top: 5vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+}
+
+.turn{
+    width: 200px;
+    height: 80px;
+
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+
+.turn h3{
+    margin: 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.turn .turnbox{
+    border: 3px solid;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.turn .turnbox:nth-child(even){
+    border-right: none;
+}
+
+.bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 40px;
+    background-color: red;
+    z-index: -1;
+}
+.dark-mode .bg{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(255, 83, 83);
+    z-index: -1;
+}
+
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 500px;
+    width: 500px;
+    margin: 30px auto;    
+}
+
+.box{
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    color: rgb(0, 0, 0);
+}
+.dark-mode .box{
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border-right: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255);
+    color: white;
+}
+
+.box:nth-child(3n){
+    border-right: none;
+}
+.box:nth-child(7){
+    border-bottom: none;
+}
+.box:nth-child(8){
+    border-bottom: none;
+}
+.box:nth-child(9){
+    border-bottom: none;
+}
+
+.box:hover{
+    background-color: rgb(113, 184, 160);
+}
+
+#play-again{
+    background-color: rgb(0, 255, 21);
+    padding: 10px 25px;
+    border: 50px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+.dark-mode #play-again{
+    background-color: rgb(158, 97, 255);
+    padding: 10px 25px;
+    border: 50px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#play-again:hover{
+    padding: 10px 25px;
+    background-color: red;
+}
+.dark-mode #play-again:hover{
+    padding: 10px 25px;
+    background-color: rgb(255, 83, 83);
+    
+}
+
+.toggle{
+    background-color: transparent;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+   
+}
+.toggle img{
+    height: 30px;
+    width: 30px;
+}
+.dark-mode #moon-icon{
+    filter: invert(1);
+}
