@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic-Tac-Toe</title>
+</head>
+<body>
+    <header>
+        <div class="arc">
+            <img src="image/logo.png" alt="">
+            <h2>Arcadely</h2>
+        </div>
+        <h1>Tic-Tac-Toe</h1>
+        <button class="toggle" id="toggle-dark-mode" aria-label="Toggle dark mode">
+            <img src="image/brightness.png" alt="Light Mode" id="sun-icon" />
+            <img src="image/moon.png" alt="Dark Mode" id="moon-icon" style="display: none;" />
+        </button>
+    </header>
+
+    <!-- New top-level content container with two children:
+         1) grid-wrapper: contains the board (.main-grid and boxes)
+         2) controls-wrapper: contains the rest (top-controls, turn, result, play-again, modal) -->
+    <div class="content" id="content">
+        
+        <div class="controls-wrapper">
+            <div class="top-controls">
+                <div class="pwa" id="pwa">
+                    <div class="checkmark" id="check">
+                        <input type="checkbox" id="ai-toggle" />
+                    </div>
+                    <h2>Play vs AI</h2>
+                </div>
+                <div id="scoreboard" class="scoreboard" style="display:none;">
+                    <h2>Scores :</h2>
+                    <div class="scores">
+                        <span>User: <b id="score-user">0</b></span>
+                        <span>AI: <b id="score-ai">0</b></span>
+                        <span>Draws: <b id="score-draw">0</b></span>
+                    </div>
+                    <div class="btns">
+                        <button id="reset-score" class="small-btn">Reset Score</button>
+                        <button id="change-symbol" class="small-btn">Change Symbol</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results">
+                <h2 id="result"></h2>
+                <button id="play-again">Play Again</button>
+            </div>  
+
+            <!-- Modal for choosing X or O when AI mode toggled / change symbol -->
+            <div id="symbol-modal" class="modal" style="display:none;">
+                <div class="modal-content" id="mc">
+                    <h3>Choose your symbol</h3>
+                    <div class="modal-buttons">
+                        <button id="choose-x" class="big-btn">X</button>
+                        <button id="choose-o" class="big-btn">O</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-wrapper">
+            <div class="turn">
+                <h3>Turn for</h3>
+                <div class="turnbox align" id="turn-x">X</div>
+                <div class="turnbox align" id="turn-o">O</div>
+                <div class="bg"></div>
+            </div>
+
+            <div class="main-grid">
+                <div class="box align" id="0"></div>
+                <div class="box align" id="1"></div>
+                <div class="box align" id="2"></div>
+                <div class="box align" id="3"></div>
+                <div class="box align" id="4"></div>
+                <div class="box align" id="5"></div>
+                <div class="box align" id="6"></div>
+                <div class="box align" id="7"></div>
+                <div class="box align" id="8"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
